@@ -1,0 +1,143 @@
+			SQL (Teórico)
+
+Tabela = Estrutura organizada entre linhas e colunas que representa uma entidade do sistema
+
+Linha = Dado real da entidade
+
+Coluna = Característica da entidade
+
+Registro = Linha completa da tabela que representa um produto específico
+
+Campo = Coluna da tabela que define o tipo de dado que pode ser armazenado ali
+
+Chave Primaria = Informação única de uma entidade
+
+Relacionamento = É quando uma tabela depende da outra
+
+			COMANDOS
+
+CREATE DATABASE = Cria um banco de dados
+
+DROP DATABASE = Remove um banco de dados
+
+USE = Definir qual banco de dados será utilizado
+
+CREATE TABLE = Cria uma tabela dentro do banco de dados
+
+IF EXISTS / IF NOT EXISTS = Condição para evitar erro ao criar ou deletar algo que já existe ou não existe
+
+PRIMARY KEY = Define a chave primária (valor único da tabela)
+
+FOREIGN KEY (FK) = Campo que cria relacionamento entre tabelas usando a chave primária de outra
+
+INSERT INTO = Insere dados (registros) dentro de uma tabela
+
+SELECT = Consulta dados de uma tabela
+
+VARCHAR = Tipo de dado string que descarta espaços vazios
+
+CHAR = Tipo de dado string que preenche espaços vazios
+
+INT = Tipo de dado numérico inteiro
+
+DECIMAL = Tipo de dado numérico com casas decimais
+
+DATETIME = Tipo de dado para data e hora
+
+AUTO_INCREMENT = Gera automaticamente valores únicos crescentes
+
+NOT NULL = Define que o campo não pode ser vazio
+
+		EXEMPLOS
+
+CREATE DATABASE
+Cria um banco de dados
+
+CREATE DATABASE Loja;
+
+DROP DATABASE
+Remove um banco de dados
+
+DROP DATABASE IF EXISTS Loja;
+
+USE
+Define qual banco será usado
+
+USE Loja;
+
+CREATE TABLE
+Cria uma tabela com colunas (campos)
+
+CREATE TABLE Clientes (
+    ID int AUTO_INCREMENT,
+    Nome varchar(100),
+    PRIMARY KEY (ID)
+);
+
+IF NOT EXISTS
+Evita erro caso a tabela já exista
+
+CREATE TABLE IF NOT EXISTS Clientes (
+    ID int
+);
+
+PRIMARY KEY
+Define um identificador único
+
+PRIMARY KEY (ID)
+
+FOREIGN KEY (FK)
+Cria relacionamento entre tabelas
+
+FOREIGN KEY (ID_cliente) REFERENCES Clientes(ID)
+
+INSERT INTO
+Insere um registro (linha) na tabela
+
+INSERT INTO Clientes (Nome) VALUES ('Maria');
+
+SELECT
+Consulta dados da tabela
+
+SELECT * FROM Clientes;
+
+VARCHAR
+Armazena texto sem completar espaços
+
+Nome varchar(5);
+
+Exemplo de retorno:
+"12"
+
+CHAR
+Armazena texto completando espaços
+
+Codigo char(5);
+
+Exemplo de retorno:
+"12 "
+
+INT
+Armazena números inteiros
+
+Idade int;
+
+DECIMAL
+Armazena números com casas decimais
+
+Preco decimal(5,2);
+
+DATETIME
+Armazena data e hora
+
+Data_cadastro datetime;
+
+AUTO_INCREMENT
+Gera números automaticamente
+
+ID int AUTO_INCREMENT;
+
+NOT NULL
+Campo obrigatório
+
+Nome varchar(100) NOT NULL;
