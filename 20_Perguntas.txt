@@ -1,0 +1,46 @@
+📊 Perguntas sobre o banco concessionaria
+1- Quantos veículos estão cadastrados com quilometragem superior a 15.000 km?
+
+2- Qual o valor médio dos veículos por empresa?
+
+3- Quais clientes possuem contratos com valor acima de R$ 2.000,00?
+
+4- Quantos contratos possuem data de devolução após '2024-07-20'?
+
+5- Qual cliente realizou o maior número de contratos?
+
+6- Quais veículos já passaram por mais de uma manutenção?
+
+7- Qual foi o valor total gasto em manutenção por veículo?
+
+8- Liste os clientes que possuem pagamentos com status "Pendente".
+
+9- Qual o total de multas aplicadas por contrato?
+
+10- Qual cliente teve a maior soma de multas?
+
+11- Quantos veículos pertencem a cada empresa?
+
+12- Qual empresa possui o veículo com maior valor cadastrado?
+
+13- Liste todos os contratos com seus respectivos:
+	nome do cliente
+	valor do contrato
+	quilometragem inicial
+
+14- Quais clientes fizeram reservas mas não possuem contratos?
+
+15- Qual o total de valores recebidos em pagamentos com status "Pago"?
+
+16- Quais devoluções tiveram valor adicional maior que R$ 50,00?
+
+17- Qual a diferença entre a quilometragem inicial do contrato e a quilometragem final da devolução para cada cliente?
+
+18- Quais contratos estão associados a veículos com quilometragem acima de 20.000 km?
+
+19- Qual o cliente mais jovem (com base na data de nascimento) que já realizou um contrato?
+
+20- Liste os veículos que:
+	possuem contrato
+	possuem multa
+	e também passaram por manutenção
