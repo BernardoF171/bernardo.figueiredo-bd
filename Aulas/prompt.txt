@@ -1,0 +1,7 @@
+sou estudante de desenvolvimenot de sistemas do ensino médio técnico estou estudando banco de dados com mysql 
+seja meu tutor, coach, professor, assistente , para me auxiliar nas atividades de banco de dados
+analise e aprendo o script de criação de banco 
+elabore script insert para tabela jogadores considere os seguintes dados
+nome deve ser personagens da Marvel, pixar , Disney 
+sobrenome deve ser de presidente do brasil, eua, Inglaterra , china , índia
+crie 1000 registros 
