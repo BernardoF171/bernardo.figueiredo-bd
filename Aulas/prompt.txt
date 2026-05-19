@@ -1,7 +1,180 @@
-sou estudante de desenvolvimenot de sistemas do ensino médio técnico estou estudando banco de dados com mysql 
-seja meu tutor, coach, professor, assistente , para me auxiliar nas atividades de banco de dados
-analise e aprendo o script de criação de banco 
-elabore script insert para tabela jogadores considere os seguintes dados
-nome deve ser personagens da Marvel, pixar , Disney 
-sobrenome deve ser de presidente do brasil, eua, Inglaterra , china , índia
-crie 1000 registros 
+Prompt — Tabela Cliente
+Crie um script INSERT INTO para a tabela Cliente do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Cliente, Nome, CPF, Data_Nascimento, Email, Telefone, Data_Cadastro, Preferencias_Notificacao)
+
+Regras:
+- Nome deve usar personagens da Marvel, Pixar e Disney como primeiro nome
+- Sobrenome deve usar nomes de presidentes do Brasil, EUA, Inglaterra, China e Índia
+- CPF deve seguir formato brasileiro válido visualmente
+- Emails únicos
+- Telefones brasileiros
+- Datas de nascimento entre 1970 e 2010
+- Data_Cadastro entre 2025 e 2026
+- Preferencias_Notificacao apenas 0 ou 1
+- IDs sequenciais começando em 1
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Produto
+Crie um script INSERT INTO para a tabela Produto do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Produto, Nome_Produto, Categoria, Tamanho, Cor, Preco, Estoque)
+
+Regras:
+- Produtos devem ser relacionados a loja virtual de roupas e acessórios
+- Categorias variadas: Vestuário, Calçados, Acessórios, Esportivo, Casual
+- Tamanhos variados: PP, P, M, G, GG, 38, 39, 40, 41, Único
+- Cores variadas
+- Preços entre 10.00 e 1500.00
+- Estoque entre 0 e 500
+- IDs sequenciais começando em 1001
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Endereco
+Crie um script INSERT INTO para a tabela Endereco do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Endereco, ID_Cliente, Rua, Numero, Cidade, Estado, CEP, Complemento)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Cliente entre 1 e 1000
+- Use cidades reais do Brasil
+- Estados devem usar siglas brasileiras
+- CEP no formato brasileiro
+- Complementos variados: Casa, Apto, Bloco, Fundos, Sala
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Pedido
+Crie um script INSERT INTO para a tabela Pedido do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Pedido, ID_Cliente, Data_Pedido, Valor_Total, Status_Pedido, Forma_Pagamento, Numero_Parcelas)
+
+Regras:
+- IDs sequenciais começando em 1001
+- ID_Cliente entre 1 e 1000
+- Datas entre 2025 e 2026
+- Valor_Total entre 20.00 e 5000.00
+- Status_Pedido: Entregue, Processando, Enviado, Cancelado
+- Forma_Pagamento: Pix, Cartão, Boleto
+- Numero_Parcelas entre 1 e 12
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Item_Pedido
+Crie um script INSERT INTO para a tabela Item_Pedido do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Item, ID_Pedido, ID_Produto, Quantidade, Preco_Unitario)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Pedido entre 1001 e 2000
+- ID_Produto entre 1001 e 2000
+- Quantidade entre 1 e 10
+- Preco_Unitario entre 10.00 e 1500.00
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Pagamento
+Crie um script INSERT INTO para a tabela Pagamento do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Pagamento, ID_Pedido, Tipo_Pagamento, Status_Pagamento, Data_Pagamento)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Pedido entre 1001 e 2000
+- Tipo_Pagamento: Pix, Cartão, Boleto
+- Status_Pagamento: Pago, Pendente, Cancelado
+- Algumas datas podem ser NULL
+- Datas entre 2025 e 2026
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Entrega
+Crie um script INSERT INTO para a tabela Entrega do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Entrega, ID_Pedido, Transportadora, Data_Envio, Data_Entrega, Status_Entrega)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Pedido entre 1001 e 2000
+- Transportadoras: Correios, Jadlog, Azul Cargo, DHL
+- Datas entre 2025 e 2026
+- Algumas Data_Entrega podem ser NULL
+- Status_Entrega: Entregue, Em transporte, Cancelado
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Troca_Devolucao
+Crie um script INSERT INTO para a tabela Troca_Devolucao do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Troca, ID_Pedido, ID_Produto, Motivo, Data_Solicitacao, Status)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Pedido entre 1001 e 2000
+- ID_Produto entre 1001 e 2000
+- Motivos variados: Produto com defeito, Tamanho errado, Produto diferente, Arrependimento
+- Datas entre 2025 e 2026
+- Status: Pendente, Aceito, Recusado
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Programa_Fidelidade
+Crie um script INSERT INTO para a tabela Programa_Fidelidade do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Fidelidade, ID_Cliente, Pontos_Acumulados, Pontos_Utilizados, Nivel_Cliente)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Cliente entre 1 e 1000
+- Pontos_Acumulados entre 0 e 10000
+- Pontos_Utilizados entre 0 e 5000
+- Nivel_Cliente: Bronze, Prata, Ouro, Diamante
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Atendimento
+Crie um script INSERT INTO para a tabela Atendimento do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Atendimento, ID_Cliente, Data_Contato, Canal, Assunto, Status)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Cliente entre 1 e 1000
+- Datas entre 2025 e 2026
+- Canal: Chat, Email, Telefone, WhatsApp
+- Assuntos variados relacionados a e-commerce
+- Status: Resolvido, Pendente, Em análise, Fechado
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Lista_Desejos
+Crie um script INSERT INTO para a tabela Lista_Desejos do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Lista, ID_Cliente, ID_Produto, Data_Adicao)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Cliente entre 1 e 1000
+- ID_Produto entre 1001 e 2000
+- Datas entre 2025 e 2026
+- Gere SQL puro compatível com MySQL
+- Não explique o código
+Prompt — Tabela Navegacao
+Crie um script INSERT INTO para a tabela Navegacao do MySQL com 1000 registros.
+
+Estrutura:
+(ID_Navegacao, ID_Cliente, ID_Produto, Data_Visualizacao, Acao)
+
+Regras:
+- IDs sequenciais começando em 1
+- ID_Cliente entre 1 e 1000
+- ID_Produto entre 1001 e 2000
+- Datas entre 2025 e 2026
+- Ações: Visualizou, Adicionou ao carrinho, Compra finalizada, Favoritou
+- Gere SQL puro compatível com MySQL
+- Não explique o código
