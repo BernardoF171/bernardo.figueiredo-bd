@@ -1,0 +1,46 @@
+Contexto e Domínio do Negócio (Cafeteria)
+O sistema deve gerenciar as operações comerciais básicas de uma cafeteria, contemplando pelo menos as seguintes entidades principais:
+
+Clientes: Cadastro dos compradores (nome, e-mail, telefone, data de cadastro).
+
+Produtos: Itens do cardápio como cafés, salgados, doces e bebidas geladas (nome, descrição, preço, categoria, estoque).
+
+Pedidos: Registro das comandas ou pedidos realizados (data, status, cliente associado).
+
+Itens do Pedido: Relação N para N entre pedidos e produtos (quantidade, preço unitário no momento da venda).
+
+Vendas/Pagamentos: Registro financeiro vinculado aos pedidos (forma de pagamento, valor total, data do pagamento).
+
+2. Requisitos de Entrega Obrigatórios
+O código SQL gerado deve ser completo (DDL e DML) e executável, contendo exatamente os seguintes artefatos:
+
+A. Estrutura e População (Banco e Massa de Dados)
+Criação do banco de dados e de todas as tabelas com suas respectivas chaves primárias e estrangeiras (PRIMARY KEY, FOREIGN KEY).
+
+Massa de dados robusta: Inserir de 20 a 30 registros reais e coerentes em cada tabela (ex: 25 clientes, 25 produtos do cardápio, 25 pedidos, etc.).
+
+B. Consultas e Programação em Banco de Dados
+5 Consultas com JOIN: Queries úteis para o negócio que envolvam múltiplas tabelas (ex: listar os produtos mais vendidos, histórico de compras por cliente, faturamento por categoria).
+
+1 VIEW: Uma visão consolidada relevante para a gestão (ex: resumo de vendas diárias ou painel de pedidos em aberto).
+
+1 FUNCTION: Uma função em PL/SQL (ou dialeto equivalente do SGBD escolhido) que realize um cálculo útil (ex: calcular o valor total de um pedido com base na quantidade e preço, ou aplicar um desconto dinâmico).
+
+1 TRIGGER: Um gatilho automático (ex: atualizar o estoque de um produto automaticamente sempre que um item for inserido no pedido, ou registrar log de auditoria em tabela de preços).
+
+2 ÍNDICES: Criação de índices em colunas estratégicas para otimização de busca (além das chaves primárias).
+
+Relatórios SQL: Queries adicionais estruturadas em formato de relatório gerencial (ex: faturamento mensal, ranking de clientes mais frequentes).
+
+3. Formato de Saída Esperado
+Forneça a resposta dividida nas seguintes etapas lógicas:
+
+Especificação de Requisitos e Regras de Negócio.
+
+Modelo Conceitual/Lógico: Breve descrição das tabelas e seus relacionamentos (Cardápio, Clientes, Pedidos, etc.).
+
+Script DDL: Código SQL para criação das tabelas, restrições, índices, views, functions e triggers.
+
+Script DML (População): Comandos INSERT com os 20 a 30 registros por tabela.
+
+Scripts de Consulta e Relatórios: As 5 queries com JOIN e os relatórios solicitados devidamente comentados.
