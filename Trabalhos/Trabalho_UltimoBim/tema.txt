@@ -1,0 +1,13 @@
+tema 
+objetivo
+descrição
+pesquisa
+ODS
+der
+dicionário
+join
+trigger
+procidure
+rollback
+
+Sou um estudante de ensino médio técnico, cursando desenvolvimento de sistemas, preciso montar um projeto para TCC de Etec, envolvendo temas da ODS, relacionados a segurança (compatíveis com a minha realidade e dia-a-dia de SP,capital), nessa primeira parte do projeto, vamos elaborar o tema, os objetivos, a descrição do projeto, e pesquisa sobre o tema escolhido. Nesse projeto, futuramente, após essas etapas cumpridas, iremos formular um software em MySQL, com base no tema,descriçao, pesquisa e etc. Não é necessário o script agora, vamos começar apenas pelo o que foi citado anteriormente. 

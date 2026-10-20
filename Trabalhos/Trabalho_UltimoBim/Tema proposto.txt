@@ -1,0 +1,70 @@
+Tema proposto
+
+“Rota Segura SP”: sistema de registro e consulta de ocorrências de furto e roubo de celular no trajeto casa-escola-trabalho, com foco em prevenção e orientação à vítima na cidade de São Paulo.
+
+Escolhi o celular porque é um crime que atinge quem usa transporte público, anda a pé ou de bicicleta, e isso inclui você e seus colegas. Também há bastante dado oficial da SSP-SP para pesquisar.
+
+ODS relacionadas
+
+ODS 11 (Cidades e Comunidades Sustentáveis): principalmente a meta de espaços públicos seguros e a de transporte seguro.
+ODS 16 (Paz, Justiça e Instituições Eficazes): redução da violência, instituições transparentes e acesso à informação.
+ODS 9 (Indústria, Inovação e Infraestrutura): como apoio, pelo uso de tecnologia como solução.
+Problema e justificativa
+
+A segurança em São Paulo está melhorando, mas o furto e o roubo de celular continuam altos e muito concentrados em certas regiões. No primeiro semestre de 2026, o roubo de celular na capital caiu 14,8%, de 31.418 para 26.758 casos. Mesmo assim, a soma de furtos e roubos de celular na capital ainda chegou a 76.134 registros. Pelo meu cálculo (76.134 menos 26.758), cerca de 49 mil desses casos são furtos, ou seja, a maioria acontece sem violência, por descuido ou oportunidade. 
+abcdoabc
+abcdoabc
+
+Pergunta-problema do TCC: como um sistema de informação pode ajudar o cidadão paulistano a entender onde e como esses crimes acontecem, a se prevenir e a agir corretamente depois de uma ocorrência?
+
+Objetivos
+
+Geral: desenvolver um sistema de informação, com banco de dados MySQL, que organize e apresente dados sobre furto e roubo de celular na cidade de São Paulo e oriente a população sobre prevenção e providências pós-ocorrência.
+
+Específicos:
+
+Pesquisar a situação da segurança pública em São Paulo capital e a relação com as ODS 11 e 16.
+Levantar e analisar dados públicos da SSP-SP sobre furto e roubo de celular por região.
+Modelar um banco de dados relacional (ocorrências, locais, categorias, orientações).
+Permitir consultas e relatórios por bairro, período e tipo de ocorrência.
+Disponibilizar orientações práticas de prevenção e de o que fazer após o crime (bloqueio do aparelho, boletim de ocorrência).
+Validar o sistema com um grupo de usuários (colegas e professores).
+Descrição do projeto
+
+O sistema seria uma aplicação web em que:
+
+o usuário consulta as regiões com mais ocorrências, por período e tipo de crime;
+o usuário registra de forma anônima uma ocorrência ou um local que considera inseguro, como relato colaborativo (isso não substitui o boletim de ocorrência oficial);
+há uma área de orientações: como se prevenir, como bloquear o celular, onde registrar o B.O.;
+um painel mostra estatísticas simples (ranking de regiões, ocorrências por horário).
+
+O banco de dados terá tabelas como usuarios, ocorrencias, locais, tipos_crime, orientacoes e relatos. Isso dá bastante material para praticar relacionamentos, chaves estrangeiras, JOIN, GROUP BY e relatórios.
+
+Pesquisa sobre o tema
+
+Panorama geral. O estado registrou, no primeiro semestre de 2026, o menor número de roubos de celular da década. Nos roubos em geral, o primeiro bimestre de 2026 teve 26.462 ocorrências no estado, 24% a menos que no mesmo período de 2025. 
+abcdoabc
+correiodamanha
+
+Onde acontece. Os crimes se concentram em áreas de grande circulação. No primeiro bimestre de 2026, o 14º DP (Pinheiros) liderou, com 1.464 registros de celulares roubados ou furtados, cerca de 24 por dia. Em seguida vieram o 4º DP (Consolação), com 1.238, e o 3º DP (Campos Elíseos), com 1.079. Um dado que ajuda a justificar o sistema: um levantamento da SSP apontou que mais de 280 vias de um mesmo bairro tiveram ao menos um registro de roubo ou furto de celular no período. 
+pinheiros lidera roubos de celular em sp com media de 1 por hora
+ +2
+
+O que o poder público está fazendo. A SSP atribui a queda, em parte, ao SP Mobile. O aplicativo foi criado em 2025 e permite cruzar informações para identificar celulares roubados que foram reativados. Mais de 20 mil aparelhos foram recuperados, e cerca de 7,1 mil já foram devolvidos aos donos. Isso é relevante para o seu projeto, porque a SSP reforça que o boletim de ocorrência é essencial para o sistema funcionar. Seu sistema pode reforçar essa orientação. 
+Inscreva-se no canal MetrópolesTV no YouTube
+ +2
+
+Pós-ocorrência. A SSP recomenda bloquear imediatamente o celular, os cartões e os aplicativos bancários, avisar familiares e amigos para evitar golpes e registrar o boletim de ocorrência. Esse passo a passo pode virar a base da área de orientações. 
+bnewssaopaulo
+
+Pontos de atenção na pesquisa:
+
+Os números acima vêm de reportagens que citam a SSP-SP. No TCC, cite a fonte primária (portal de transparência e estatísticas da SSP-SP) e confira os dados lá.
+O ranking de Pinheiros, Consolação etc. é por distrito policial, não por bairro exato. Deixe isso claro no texto.
+Nem todo crime vira boletim de ocorrência. Os dados oficiais mostram só o que foi registrado.
+
+Fontes para aprofundar: portal da SSP-SP (estatísticas trimestrais por município e delegacia), site oficial das ODS no Brasil (ODS 11 e 16), Fórum Brasileiro de Segurança Pública (Anuário) e Agência SP.
+
+Alternativas, se preferir mudar
+Segurança digital e golpes pós-roubo (ODS 16): foco em fraudes depois do furto do celular.
+Segurança de mulheres no transporte público (ODS 5 e 11): relatos de assédio e rotas mais seguras. É um tema mais sensível, então exige mais cuidado com privacidade.
