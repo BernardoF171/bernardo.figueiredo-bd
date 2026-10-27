@@ -1,0 +1,63 @@
+-- Criação do Banco de Dados
+CREATE DATABASE IF NOT EXISTS rota_segura_sp;
+USE rota_segura_sp;
+
+-- 1. Tabela de Tipos de Crime (Furto vs Roubo)
+CREATE TABLE tipos_crime (
+    id_tipo_crime INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    descricao TEXT
+);
+
+-- 2. Tabela de Locais (Ruas, Bairros e Distritos Policiais)
+CREATE TABLE locais (
+    id_local INT AUTO_INCREMENT PRIMARY KEY,
+    nome_via_bairro VARCHAR(150) NOT NULL,
+    distrito_policial VARCHAR(100) NOT NULL, -- Ex: 14º DP - Pinheiros
+    regiao_cidade VARCHAR(100) NOT NULL,    -- Ex: Zona Oeste, Centro
+    latitude DECIMAL(10, 8),
+    longitude DECIMAL(11, 8)
+);
+
+-- 3. Tabela de Usuários (Para painel administrativo e relatos colaborativos)
+CREATE TABLE usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha_hash VARCHAR(255) NOT NULL,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 4. Tabela de Ocorrências (Dados consolidados / Oficiais da SSP-SP)
+CREATE TABLE ocorrencias (
+    id_ocorrencia INT AUTO_INCREMENT PRIMARY KEY,
+    id_tipo_crime INT NOT NULL,
+    id_local INT NOT NULL,
+    data_hora DATETIME NOT NULL,
+    fonte VARCHAR(100) DEFAULT 'SSP-SP',
+    CONSTRAINT fk_ocorrencia_tipo FOREIGN KEY (id_tipo_crime) REFERENCES tipos_crime(id_tipo_crime),
+    CONSTRAINT fk_ocorrencia_local FOREIGN KEY (id_local) REFERENCES locais(id_local)
+);
+
+-- 5. Tabela de Relatos Colaborativos (Feitos pelos cidadãos)
+CREATE TABLE relatos (
+    id_relato INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NULL, -- Permite relato anônimo se for NULL
+    id_local INT NOT NULL,
+    id_tipo_crime INT NOT NULL,
+    data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
+    descricao TEXT NOT NULL,
+    status_moderacao VARCHAR(30) DEFAULT 'Pendente', -- Pendente, Aprovado, Rejeitado
+    CONSTRAINT fk_relato_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    CONSTRAINT fk_relato_local FOREIGN KEY (id_local) REFERENCES locais(id_local),
+    CONSTRAINT fk_relato_tipo FOREIGN KEY (id_tipo_crime) REFERENCES tipos_crime(id_tipo_crime)
+);
+
+-- 6. Tabela de Orientações (Guia pós-crime e prevenção)
+CREATE TABLE orientacoes (
+    id_orientacao INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(150) NOT NULL,
+    categoria VARCHAR(50) NOT NULL, -- Ex: 'Prevenção', 'Pós-Crime', 'Bloqueio'
+    conteudo TEXT NOT NULL,
+    passo_a_passo TEXT
+);
